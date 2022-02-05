@@ -11,32 +11,28 @@ WaylandCompositor {
             id: win
             visible: true
             color: "transparent"
-            width: 1280
-            height: 720
+            width: 1920
+            height: 1080
 
-            Rectangle {
-                id: topArea
-                color: "transparent"
-                width: 1280
-                height: 100
-                anchors.left: parent.left
-                anchors.top: parent.top
-            }
             Rectangle {
                 id: centerArea
                 color: "transparent"
-                width: 1280
-                height: 720 - 200
+                width: 1920
+                height: 1080
                 anchors.left: parent.left
                 anchors.top: topArea.bottom
             }
             Rectangle {
                 id: buttomArea
-                //color: "transparent"
-                width: 1280
-                height: 100
+                color: "transparent"
+                width: 1920
+                height: 93
                 anchors.left: parent.left
                 anchors.bottom: parent.bottom
+
+                MomiBar {
+                    id:hoge
+                }
             }
         }
     }
